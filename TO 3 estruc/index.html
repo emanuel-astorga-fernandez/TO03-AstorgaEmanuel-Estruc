@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML y XML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>HTML y XML</h1>
+<p>Tarea TO03 - Estructuras de Datos (IC2001) - TEC</p>
+
+<h2>Índice</h2>
+<ul>
+  <li><a href="#sobre-mi">Sobre mí</a></li>
+  <li><a href="#introduccion">1. Introducción</a></li>
+  <li><a href="#bien-formado">2. Documento bien formado</a></li>
+  <li><a href="#infraestructura">3. Infraestructura del documento</a></li>
+  <li><a href="#etiquetas">4. Etiquetas más populares de HTML</a></li>
+  <li><a href="#diferencias">5. Diferencias y similitudes</a></li>
+  <li><a href="#ejemplos">6. Ejemplos</a></li>
+  <li><a href="#referencias">Referencias</a></li>
+</ul>
+
+<h2 id="sobre-mi">Sobre mí</h2>
+<p>Soy Emanuel y estudio Ingeniería en Computación en el TEC. Hasta ahora he programado en Java, C++ y Python.</p>
+<p>Cuando termine la carrera quiero trabajar en desarrollo de software.</p>
+<p>Me gusta convivir con mis amigos, familia, jugar juegos competitivos y siempre destacar.</p>
+<h2 id="introduccion">1. Introducción</h2>
+<p>XML significa Extensible Markup Language. Es un lenguaje para guardar datos usando etiquetas, y es una versión más limitada de SGML, un lenguaje de marcado que ya existía. (XML 1.1, sección 1 Introduction)</p>
+<p>Una de sus metas es que sea fácil hacer programas que lo lean y que los documentos se entiendan con solo verlos. (XML 1.1, sección 1.1 Origin and Goals)</p>
+<p>HTML es el lenguaje de las páginas web. Su estándar se llama HTML Living Standard. Tiene su propia sintaxis y también una sintaxis XML. (HTML Living Standard, sección 1.8 HTML vs XML syntax)</p>
+
+<h2 id="bien-formado">2. Documento bien formado</h2>
+<p>Un documento XML está bien formado cuando cumple las reglas de la especificación. Si no las cumple es un error fatal y el programa que lo lee no puede seguir. (XML 1.1, sección 2.1 Well-Formed XML Documents)</p>
+<ul>
+  <li>Hay un solo elemento raíz que tiene a todos los demás adentro.</li>
+  <li>Cada etiqueta que se abre se cierra con el mismo nombre. Si no tiene contenido, se escribe vacía, por ejemplo <code>&lt;br/&gt;</code>.</li>
+  <li>Las etiquetas se cierran en orden: la última que abrí es la primera que cierro.</li>
+</ul>
+<p>(XML 1.1, sección 3.1 Start-Tags, End-Tags, and Empty-Element Tags)</p>
+<p>Es como los paréntesis de una operación. Si abro dos y cierro uno, no se puede resolver.</p>
+
+<h2 id="infraestructura">3. Infraestructura del documento</h2>
+
+<h3>En XML</h3>
+<p>Puede empezar con un prólogo, donde va la declaración XML (por ejemplo la versión). (XML 1.1, sección 2.8 Prolog and Document Type Declaration)</p>
+<p>Después va el elemento raíz. Los elementos tienen etiqueta de inicio y de cierre, y los atributos van dentro de la de inicio. (XML 1.1, sección 3.1 Start-Tags, End-Tags, and Empty-Element Tags)</p>
+<p>También se pueden poner comentarios. (XML 1.1, sección 2.5 Comments)</p>
+
+<h3>En HTML</h3>
+<p>Lo primero es el DOCTYPE, que se escribe <code>&lt;!DOCTYPE html&gt;</code>. Da igual si va en mayúscula o minúscula. (HTML Living Standard, sección 13.1.1 The DOCTYPE)</p>
+<p>Después van los elementos, dentro de <code>html</code>. Normalmente es un <code>head</code> y un <code>body</code>. Cada elemento tiene etiqueta de inicio, contenido y etiqueta de cierre, y puede tener atributos. (HTML Living Standard, sección 13.1.2 Elements)</p>
+
+<h2 id="etiquetas">4. Etiquetas más populares de HTML</h2>
+<table>
+  <tr><th>Etiqueta</th><th>Para qué sirve</th><th>Sección</th></tr>
+  <tr><td>&lt;html&gt;</td><td>Es la raíz de todo el documento</td><td>4.1.1 The html element</td></tr>
+  <tr><td>&lt;head&gt;</td><td>Información de la página (título, estilos)</td><td>4.2.1 The head element</td></tr>
+  <tr><td>&lt;title&gt;</td><td>El título de la pestaña</td><td>4.2.2 The title element</td></tr>
+  <tr><td>&lt;body&gt;</td><td>Lo que se ve en la página</td><td>4.3.1 The body element</td></tr>
+  <tr><td>&lt;h1&gt; a &lt;h6&gt;</td><td>Títulos</td><td>4.3 Sections</td></tr>
+  <tr><td>&lt;p&gt;</td><td>Un párrafo</td><td>4.4.1 The p element</td></tr>
+  <tr><td>&lt;ul&gt; &lt;ol&gt; &lt;li&gt;</td><td>Listas</td><td>4.4 Grouping content</td></tr>
+  <tr><td>&lt;div&gt;</td><td>Una caja para agrupar cosas</td><td>4.4 Grouping content</td></tr>
+  <tr><td>&lt;a&gt;</td><td>Un enlace</td><td>4.5.1 The a element</td></tr>
+  <tr><td>&lt;img&gt;</td><td>Una imagen (no lleva cierre)</td><td>4.8 Embedded content</td></tr>
+</table>
+
+<h2 id="diferencias">5. Diferencias y similitudes</h2>
+
+<h3>Similitudes</h3>
+<ul>
+  <li>Los dos usan etiquetas de inicio y de cierre.</li>
+  <li>Los dos usan atributos dentro de la etiqueta de inicio.</li>
+  <li>Los dos tienen un elemento raíz con otros elementos adentro, como un árbol.</li>
+  <li>Los dos permiten comentarios.</li>
+</ul>
+<p>(XML 1.1, sección 3.1; HTML Living Standard, secciones 13.1.2 Elements y 13.1.6 Comments)</p>
+
+<h3>Diferencias</h3>
+<table>
+  <tr><th></th><th>XML</th><th>HTML</th></tr>
+  <tr><td>Para qué sirve</td><td>Guardar datos con etiquetas que uno inventa</td><td>Hacer páginas web con etiquetas que ya define el estándar</td></tr>
+  <tr><td>Etiquetas de cierre</td><td>Siempre hacen falta</td><td>Algunas se pueden omitir y otras (como img) no llevan</td></tr>
+  <tr><td>Si hay un error</td><td>Es error fatal y se detiene</td><td>Tiene reglas propias para leer el documento</td></tr>
+  <tr><td>Primera línea</td><td>Declaración XML (opcional)</td><td>DOCTYPE</td></tr>
+</table>
+<p>(XML 1.1, secciones 2.1 y 2.8; HTML Living Standard, secciones 13.1.1 The DOCTYPE, 13.1.2 Elements y 13.1.2.4 Optional tags)</p>
+
+<h2 id="ejemplos">6. Ejemplos</h2>
+<p>Figura 1. ejemplo.html</p>
+<img src="img/ejemplo-html.png" alt="Captura de ejemplo.html">
+
+<p>Figura 2. ejemplo.xml</p>
+<img src="img/ejemplo-xml.png" alt="Captura de ejemplo.xml">
+
+<h2 id="referencias">Referencias</h2>
+<ul>
+  <li>Bray, T., Paoli, J., Sperberg-McQueen, C. M., Maler, E., Yergeau, F., & Cowan, J. (2006). <i>Extensible Markup Language (XML) 1.1 (Second Edition)</i>. W3C. https://www.w3.org/TR/2006/REC-xml11-20060816/</li>
+  <li>WHATWG. (s. f.). <i>HTML Living Standard</i>. https://html.spec.whatwg.org/multipage/</li>
+</ul>
+
+</body>
+</html>
